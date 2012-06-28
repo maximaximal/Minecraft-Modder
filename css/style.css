@@ -1,0 +1,283 @@
+/* 
+    Document   : style.css
+    Created on : 05.02.2012, 20:23:47
+    Author     : Max Heisinger
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body > header { min-width: 760px; }
+
+/*Style der Seite
+    ------------------------------------------------------
+*/
+
+body {
+    background-color: #E8E8E8;
+}
+header {
+    background-color: darkgrey;
+    background-image: url("bg_dark.gif");
+    padding: 20px;
+}
+#main {
+    margin-top: 20px;
+}
+#page-footer {
+    bottom: 0px;
+    position: fixed;
+}
+
+/*Initialisierung - Benötigt zum korrekten Ablauf!
+    ------------------------------------------------------
+*/
+#step1 {
+    display: none;
+}
+#whereismyminecraft {
+    display: none;
+}
+#loading_bar {display: none;}
+#messagebox {
+    display: none;
+}
+#cover_site, #popup_add_mod {
+    display: none;
+}
+
+#info_minecraftjar {display: none;}
+#info_ModLoader {display: none;}
+#info_MC-Forge {display: none;}
+#info_TMI {display: none;}
+
+/*Text
+    ------------------------------------------------------
+*/
+header h1 {
+    font-size: 45px;
+    color: #E8E8E8;
+}
+header h2 {
+    font-size: 20px;
+    color: #111111;
+    font-family: Arial;
+}
+header a {
+    text-decoration: none;
+    color: #3072b3;
+}
+header a:hover {
+    color: #599bdc;
+}
+
+#main h1 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-family: Georgia;
+    font-size: 20px;
+    color: #06C;
+    text-shadow: 1px 1px 1px #454545;
+}
+#main h2 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    font-family: Georgia;
+    font-size: 18px;
+    color: #599bdc;
+    text-shadow: 1px 1px 1px #454545;
+}
+#main h3 {
+    font-family: Verdana;
+    font-size: medium;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}
+#main ol {
+    padding-left: 50px;;
+}
+#main ol li {
+    padding: 5px;
+    list-style: decimal;
+}
+#main {
+    font-family: Verdana;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #EEE;
+    color: #343434;
+    margin-bottom: 50px;
+}
+pre {
+    padding: 10px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    font-family: monospace;
+    color: #800;
+}
+.warning {
+    color: #800;
+}
+
+ul {
+    list-style: circle;
+    margin-left: 20px;
+    padding: 5px;
+}
+ul a {
+    text-decoration: none;
+    color: #599bdc;
+    text-shadow: 1px 1px 0px white;
+}
+ul a:hover {
+    color: #3072b3;
+}
+
+/* NoScript
+    ------------------------------------------------------
+*/
+#no_javascript {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom:0px;
+    opacity: 0.85;
+    background: #222;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#no_javascript h1 {
+    color: #800;
+    text-shadow: 0px 0px 2px white;
+    font-family: Arial;
+    font-size: 60px;
+    margin: 20px;
+}
+
+#no_javascript p {
+    color: #FFFFFF;
+    font-family: Verdana, Arial;
+}
+
+/*Forms
+    ------------------------------------------------------
+*/
+
+form {
+    font-family: Verdana;
+    font-size: 13px;
+    color: #222;
+}
+
+/*Loadingbar
+    ------------------------------------------------------
+*/
+#loading_bar {
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    font-family: Arial, Verdana;
+    color: #181818;
+    font-size: 12px;
+    background: lightskyblue;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+/*Messagebox
+    ------------------------------------------------------
+*/
+#messagebox {
+    left: 30px;
+    top: 60px;
+    box-shadow: 0px 0px 4px #454545;
+    border-color: #ff0;
+    border-width: 1px;
+    position: absolute;
+    width: 230px;
+    min-height: 100px;
+    background: #fefc78;
+    opacity: 0.9;
+    padding: 7px;
+}
+#messagebox h1 {
+    opacity: 1;
+    color: #343434;
+    text-shadow: 0px 0px 3px white;
+    font-size: 20px;
+    font-family: Georgia;
+    text-align: left;
+    padding-left: 20px;
+}
+#messagebox p {
+    opacity: 1;
+    color: #454545;
+    font-size: 11px;
+    font-family: Verdana;
+}
+/*Mods
+    ------------------------------------------------------
+*/
+.modhasinfo {
+    background-image: url("Info.png");
+    background-repeat: no-repeat;
+    background-position: 95% 2px;
+    padding: 0px 50px 0px 10px;
+}
+/*Footer
+    ------------------------------------------------------
+*/
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-image: url("bg_dark.gif");
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family: Arial;
+}
+footer a{
+    color: #fefc78;
+}
+footer a:hover {
+    color: orange;
+}
+/*Loading
+    ------------------------------------------------------
+*/
+#loading{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom:0px;
+    opacity: 0.85;
+    background: #222;
+}
+#loading_box {
+    position: relative;
+    text-align: center;
+    margin:auto;
+    opacity: 1;
+    top: 30%;
+}
+#loading_box h1 {
+    font-size: 25px;
+    padding: 30px;
+    color: #656565;
+    text-shadow: 0px 0px 3px black;
+}
+#loading_box h2 {
+    font-size: 20px;
+    color: #d4d4d4;
+    padding: 10px 0px 40px 0px;
+}
+/*Sidebar Info
+    ------------------------------------------------------
+*/
+.sidebar-info {
+    font-family: Verdana;
+    font-size: 12px;
+}

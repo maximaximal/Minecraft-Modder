@@ -1,0 +1,6 @@
+AuthUserFile /usr/www/users/maximat//MC-Modder//.htpasswd
+AuthName "Realm"
+AuthType Basic
+<Limit GET POST PUT>
+require valid-user
+</Limit>
