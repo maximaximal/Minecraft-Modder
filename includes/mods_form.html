@@ -1,0 +1,18 @@
+<!--
+These Elements are included in the mods-chooser.
+-->
+<br>
+<h3>Required Mods</h3>
+    <p> These Mods are often required by other mods. You have to install the mods which are needed, too much aren't bad ;)</p>
+    <div>
+        <input type="checkbox" name="essential[]" value="ModLoader"><label for="essential[]" class="modhasinfo" onclick="sinfo_show('ModLoader')">Modloader</label><br>
+        <input type="checkbox" name="essential[]" value="MC-Forge"><label for="essential[]" class="modhasinfo" onclick="sinfo_show('MC-Forge')">MC-Forge</label>
+    </div>
+<br>
+<h3>Ingame-Inventory-Editing Mods</h3>
+    <p>You can't install those mods together, they are not compatible. You'll have to choose one of them</p>
+    <div>
+        <input type="radio" name="invediting" id="NO_SELECTION"><label for="NO_SELECTION">I don't want those Inv-Editing Mods!</label><br>
+        <input type="radio" name="invediting" id="TMI" value="TMI"><label for="TMI" class="modhasinfo" onclick="sinfo_show('TMI')">Too Many Items</label><br>
+        <input type="radio" name="invediting" id="NEI" value="NEI"><label for="NEI">Not Enough Items</label><br>
+    </div>
