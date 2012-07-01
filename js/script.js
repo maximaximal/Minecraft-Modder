@@ -11,6 +11,12 @@ function hide(id) {
 function modinfo(mod) {
     document.getElementById("mod_info").className = ""
 }
+
+window.onhashchange = function () {
+    location.reload()
+}
+
+
 //------------------------------
 // Message-Box
 // Includes:
@@ -250,7 +256,7 @@ function verifyUser() {
                 }
             else
                 {
-                    message("Authentification failed!", "Cannot verify the user \"" + document.minecraft_login.minecraft_Username.value + "\"! Is the login correct?")
+                    message("Authentification failed!", "Cannot verify the user \"" + document.minecraft_login.minecraft_Username.value + "\"! Is the login correct?");
                 }
             },
             error:function(){

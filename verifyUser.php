@@ -7,13 +7,19 @@ $process = $_POST['process'];
 $DownloadKey = null;
 
 $validate = ValidateUser($user, $pass);
-
-mkdir("work/$process");
-mkdir("work/$process/modding");
-mkdir("work/$process/modding/mods");
-mkdir("work/$process/modding/bin");
-mkdir("work/$process/modding/bin/minecraft");
-
+error_reporting(0);
+try
+{
+    mkdir("work/$process");
+    mkdir("work/$process/modding");
+    mkdir("work/$process/modding/mods");
+    mkdir("work/$process/modding/bin");
+    mkdir("work/$process/modding/bin/minecraft");
+}
+catch(Exception $e)
+{
+    //Nothing to do; 
+}
 if ($validate != false)
 {
     $handler = fopen("work/$process/status" , "w+");

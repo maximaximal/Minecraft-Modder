@@ -13,13 +13,14 @@ foreach (glob("download/"."*.zip") as $filename){
     $censored_filename = substr($filename, 9);
     $old = time() - filectime($filename);
     $remainingTime = 1000 - $old;
-    echo "Filename = '$censored_filename' - Is ".$old." sec old - ".$remainingTime."s until delete...<br>";
+    echo "Filename = '$censored_filename' - Is ".$old." sec old - ".$remainingTime."s until delete... (".(filesize($filename) / 1024 / 1024)." MB)<br>";
     if (filectime($filename) + 1000 <= time())
     {
         unlink($filename);
-        echo "<strong style='color: red'>DELETED: </strong> '$censored_filename' - was ".$old."sec old<br>";
+        echo "<strong style='color: red'>DELETED: </strong> '$censored_filename' - was ".$old."sec old (".(filesize($filename) / 1024 / 1024)." MB)<br>";
     } 
-}  
+}
+
 
 echo "<h2>Cleaning the work-directories</h2>";
 $verz = $_SERVER['DOCUMENT_ROOT']."/work/";
@@ -35,57 +36,30 @@ $verz = $_SERVER['DOCUMENT_ROOT']."/work/";
                             
                             if ($old > 4000)
                             {
-                                echo "<strong style='color: red'>DELETED:</strong> Directory $dname - older than 4000 seconds ($old seconds) (".calcSize(get_size($filename, 0)).")<br>";
+                                echo "<strong style='color: red'>DELETED:</strong> Directory $dname - older than 4000 seconds ($old seconds) (".get_gesamt_size($_SERVER['DOCUMENT_ROOT']."/work/$dname/").")<br>";
                                 if (exec("rm -r /usr/www/users/maximat/MC-Modder/work/$dname/"))
                                     echo "    <strong>-Delete failed!</strong> <br>";
                                 
                             }
                             else
-                                echo "Directory $dname is $old seconds old. - ".(4000 - $old)." seconds until delete (".calcSize(get_size($filename, 0)).")<br>";
+                                echo "Directory $dname is $old seconds old. - ".(4000 - $old)." seconds until delete (".((get_gesamt_size($_SERVER['DOCUMENT_ROOT']."/work/$dname/")) / 1024 / 1024)." MB)<br>";
                         }
                     }
                     closedir ($handle);
 echo "<h2>Refresh</h2>";
 echo "<input type='button' value='Refresh' onclick='RefreshCleanupSite()'>";
 
-function get_size($path,$size)
-    {
-      if(!is_dir($path))
-        {
-          $size+=filesize($path);
-        }
-      else
-        {
-          $dir = opendir($path);
-          while($file = readdir($dir))
-            {
-              if(is_file($path."/".$file))
-                $size+=filesize($path."/".$file);
-              if(is_dir($path."/".$file) && $file!="." && $file!="..")
-                $size=get_size($path."/".$file,$size);
-            }
-        }
-      return($size);
-    }
-    function calcSize($size)
-    {
-  $measure = "Byte";
-  if ($size >= 1024)
-    {
-      $measure = "KB";
-      $size = $size / 1024;
-    }
-  if ($size >= 1024)
-    {
-      $measure = "MB";
-      $size = $size / 1024;
-    }
-  if ($size >= 1024)
-    {
-      $measure = "GB";
-      $size = $size / 1024;
-    }
-  $size = sprintf("%01.2f", $size);
-  return $size . " " . $measure;
-    }
+
+function get_gesamt_size($dir)
+{ //From http://www.tutorials.de/php/181032-ordnergroesse-anzeigen-mb.html
+   $fp=opendir($dir);
+   while($file=readdir($fp)){
+   if ($file != "." && $file != "..") {
+   if(is_dir($dir.$file)) $size=get_gesamt_size($dir.$file."/")+$size;
+   else $size=filesize($dir.$file)+$size;
+   }
+   }
+   closedir($fp);
+   return $size;
+   }
 ?>

@@ -5,7 +5,6 @@
         <link href="css/import.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/ajaxfileupload.js"></script>
         <title>Minecraft Modder</title>
     </head>
     <body onload="SiteLoaded()">

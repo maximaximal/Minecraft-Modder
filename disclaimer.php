@@ -26,5 +26,5 @@
                             <h1>Technical Stuff (For those, who are interested)</h1>
                             <p>I_ve made some technical site, which are mainly designed for maintance. If you are interested, you could still see those sites and check out the technical awsomenes :D</p>
                             <ul>
-                                <li>Cleanup Script Output - <a href="#cleanup" onclick="RefreshCleanupSite()">Link</a></li>
+                                <li>Cleanup Script Output - <a href="#cleanup" onclick="">Link</a></li>
                             </ul>

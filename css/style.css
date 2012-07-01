@@ -28,6 +28,7 @@ header {
     position: fixed;
 }
 
+
 /*Initialisierung - Benötigt zum korrekten Ablauf!
     ------------------------------------------------------
 */
@@ -49,6 +50,38 @@ header {
 #info_ModLoader {display: none;}
 #info_MC-Forge {display: none;}
 #info_TMI {display: none;}
+.expand {display: none}
+.expand_active {display: block;}
+
+/* ModBox
+    ------------------------------------------------------
+*/
+
+.ModBox {
+    height: 128px;
+    width: 128px;
+    border-radius: 10px;
+    background-color: lightblue;
+    margin: 20px;
+    float: left;
+}
+.ModBoxInfo {
+    padding: 5px;
+    text-align: center;
+}
+#AvailableMods > h1 {
+    color: #3072b3;
+    font-size: 20px;
+}
+#AvailableMods > h2 {
+    color: #599bdc;
+    font-family: Arial;
+    padding-top: 0px;
+    font-size: 10px;
+}
+#AvailableMods > p {
+    font-size: 12px;
+}
 
 /*Text
     ------------------------------------------------------

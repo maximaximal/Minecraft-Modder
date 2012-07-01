@@ -1,0 +1,5 @@
+log NEI Install Script - Created by maximaximal;
+ExtractToJar database CodeChickenCore.zip;
+ExtractToJar database NEI.zip;
+log Finished NEI install!;
+log Would be cool to see you again!

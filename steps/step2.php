@@ -13,6 +13,7 @@
     <select name="version">
         <option>Advanced</option>
         <option>1.2.5</option>
+        <option>easy</option>
     </select>
     <input type="button" value="Select" onclick="gotoStep3()">
 </form>

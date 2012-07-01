@@ -10,17 +10,22 @@ $Status = true;
 
 //Installation Script
 
-if(!$API->ExtractToJar("CodeChickenCore.zip") && $Status)
-{
-    echo "Error unzipping the file CodeChickenCore.zip";
-    $Status = false;
-}
+$API->InterpretScript("NEI.mcms");
 
-if(!$API->ExtractToJar("NEI.zip") && $Status)
-{
-    echo "Error unzipping the file NEI.zip";
-    $Status = false;
-}
+//if(!$API->ExtractToJar("CodeChickenCore.zip") && $Status)
+//{
+//    echo "Error unzipping the file CodeChickenCore.zip";
+//    $API->log("CodeChickenCore.zip was not extracted!", "NEI-Install");
+//    $Status = false;
+//}
+//
+//if(!$API->ExtractToJar("NEI.zip") && $Status)
+//{
+//    echo "Error unzipping the file NEI.zip";
+//    $API->log("NEI.zip was not extracted!", "NEI-Install");
+//    $Status = false;
+//}
+
 //Return true
 echo "true";
 ?>
