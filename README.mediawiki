@@ -1,0 +1,5 @@
+== How to use ==
+You can access his software at [[http://mcmodder.maximaximal.com]], but I have to ask the modders for their permission to host this service. Until that time, this modding service will stay under heavy development.
+
+== Help this project ==
+It would be cool if you point out some spelling mistakes or other dumb issues in my code and send your impressions to me. I would be very happy with something like that :)
