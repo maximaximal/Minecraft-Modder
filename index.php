@@ -35,7 +35,7 @@
         </div>
         
         <footer>
-            Minecraft Modder - Made by <a href="http://maximaximal.com">maximaximal</a> - Your Process-Number: <span id="footer_processnumber">Not Available!</span>
+            Minecraft Modder - Made by <a href="http://maximaximal.com">maximaximal</a> - Your Process-Number: <span id="footer_processnumber">Not Available!</span> - <a href="https://github.com/maximaximal/Minecraft-Modder">View Source</a>
         </footer>
         <div id="loading">
             <div id="loading_box">
