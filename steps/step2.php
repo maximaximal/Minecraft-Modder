@@ -5,9 +5,9 @@
  * and open the template in the editor.
  */
 ?>
-<h1>Step 2: Select your Version</h1>
+<h1>Which method do you prefer?</h1>
 <p>
-    Please choose the version of the uploaded minecraft.jar in the dropdown-list. We are trying to keep this up to date, but you could still select the "Advanced" option, which won't give you some mods to install. <br> All listed versions will have some mods, which are installable with only one click!
+    There are multiple ways to mod your MineCraft: The Advanced, the Easy and the Programmers way. They aren't finished yet, so please wait for them...
 </p>
 <form enctype="multipart/form-data" name="mcversion" method="POST" action="">
     <select name="version">
