@@ -209,8 +209,22 @@ class installAPI
                         $Words = "";
                         $WordsBefore = "";
                         break;
+                    case "end":
+                        $this->log_Script("[$Key] - Ending Script ($Cmd[1])", "$Name");
+                        if ($Cmd[1] == "true")
+                            return true;
+                        if ($Cmd[1] == "false")
+                            return false;
+                        break;
+                    case "GetMod":
+                        if($this->GetMod($Cmd[1], $Cmd[2], $Cmd[3]))
+                            $this->log_Script("[$Key] - GetMod ran out succefully! - From: $Cmd[1], To: $Cmd[2], Option: $Cmd[3]", "$Name");
+                        else
+                            $this->log_Script("[$Key] - GetMod had an error! - From: $Cmd[1], To: $Cmd[2], Option: $Cmd[3]", "$Name");
+                        break;
                     default:
                         $this->log_Script("[$Key] - Command $Cmd[0] was not known by the interpreter!", "$Name");
+                        break;
                 }
             }
             $this->log_Root("$Path Script ran out succefully!");

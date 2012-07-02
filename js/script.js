@@ -69,6 +69,10 @@ function SiteLoaded()
     {
         document.getElementById("step").innerHTML = getFile("cleanup.php", "Cleanup");
     }
+    if(Anchor == "develop")
+    {
+        document.getElementById("step").innerHTML = getFile("develop.php", "Develop");
+    }
     else if(Anchor == null)
     {
         getFile("cleanup.php", "Cleaning up...");
